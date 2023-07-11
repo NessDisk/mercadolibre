@@ -1,0 +1,8 @@
+front - end
+    - Eliminar asset innecesarios 
+    - nav bar componen
+    - search
+    - details 
+    - cards
+
+front
