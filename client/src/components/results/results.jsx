@@ -1,75 +1,58 @@
-import React from 'react'
+import React, { useEffect }from 'react'
 import './results.scss'
-import Product_Test from '../../assets/Product_Test.jpg'
+import Card from '../card/card'
+import { connect } from 'react-redux';
+import { setEndpoints } from '../../store/actions/actions';
 
-function results() {
+function Results(props) {
+
+  const { endpoints, setEndpoints } = props;
+
+
+  // useEffect(() => {
+  //   // Simulando una llamada asincrónica para obtener los endpoints
+  //   // Aquí podrías usar fetch o axios para obtenerlos de una API real
+  //   setTimeout(() => {
+  //     const fetchedEndpoints = ['https://api.mercadolibre.com/sites/MLA/search?q=:test'];
+  //     setEndpoints(fetchedEndpoints);
+
+  //   }, 5000); // Simulamos un retardo de 2 segundos para obtener los endpoints
+
+  //   console.log(endpoints);
+  // }, [setEndpoints]);
+
+  useEffect(() => {
+    // Invocar la acción para obtener los datos desde los endpoints
+    props.setEndpoints();
+    console.log('El componente se ha montado');
+  }, [props.setEndpoints]);
+
+
   return (
     <div className='container'>
       <div className='dir_text' >dir →</div>
       <div className='resultSearch'>
-        <div className='Reslut_info'>
-          <img className='result_img' src={Product_Test}/>
-          <div className='result_metaData' >
-            
-            <div className='result_value'>
-                <h2 className='result_numValue'>
-                  value 0000$  
-                </h2>
-                <div className='result_pointValue'/>
-            </div>
 
-            <div className='result_characterist'>
-              xxx xxx xxxx xxx xxx xxx xxx xxx xxxx xxxx xxxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
-            </div>
+      {/* <Card></Card>
+      <Card></Card>
+      <Card></Card> */}
 
-          </div>          
-          <div className='result_extra'> extra</div>
-        </div>
+{/* {props.endpoints.map((endpoint, index) => ( <p key={index}>{endpoint}</p> ))} */}
 
-      {/*    */}
-
-      <div className='Reslut_info'>
-          <img className='result_img' src={Product_Test}/>
-          <div className='result_metaData' >
-            
-            <div className='result_value'>
-                <h2 className='result_numValue'>
-                  value 0000$  
-                </h2>
-                <div className='result_pointValue'/>
-            </div>
-
-            <div className='result_characterist'>
-              xxx xxx xxxx xxx xxx xxx xxx xxx xxxx xxxx xxxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
-            </div>
-
-          </div>          
-          <div className='result_extra'> extra</div>
-        </div>
- {/*    */}
-
- <div className='Reslut_info'>
-          <img className='result_img' src={Product_Test}/>
-          <div className='result_metaData' >
-            
-            <div className='result_value'>
-                <h2 className='result_numValue'>
-                  value 0000$  
-                </h2>
-                <div className='result_pointValue'/>
-            </div>
-
-            <div className='result_characterist'>
-              xxx xxx xxxx xxx xxx xxx xxx xxx xxxx xxxx xxxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
-            </div>
-
-          </div>          
-          <div className='result_extra'> extra</div>
-        </div>
-
+{endpoints.map((endpoint, index) => ( <p key={index}>{endpoint.title}</p> ))}
       </div>
     </div>
   )
 }
 
-export default results
+const mapStateToProps = (state) => {
+  return {
+    endpoints: state.endpoints,
+  };
+};
+
+const mapDispatchToProps = {
+  setEndpoints,
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Results) ;

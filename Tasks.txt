@@ -1,8 +1,15 @@
 front - end
-    - Eliminar asset innecesarios 
-    - nav bar componen
-    - search
-    - details 
-    - cards
+    - Eliminar asset innecesarios <- x 
+    - nav bar componen <- x
+    - search <-x
+    - details <- x
+    - cards   <- x
+    - router  <- x
+    - recoger la informaciond del imput. <- x
+    - ir la direccion desde desde el imput. <- x
+    - moverse entre pantallas por el router. <- x
+    - poner la query en url from to the search <- x
+    - Recoger el resultados de la query result <- x
+        - Conectar la quiere del bar con lad search
+    - Recoger el resultados de, la query details.
 
-front

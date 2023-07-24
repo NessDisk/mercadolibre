@@ -1,0 +1,53 @@
+.Reslut_info{
+    display: flex;
+    flex-direction: row;
+    border-radius: 10px;
+    border-top: 1px solid rgba(214, 214, 214, 0.734) ;
+    border-bottom: 1px solid rgba(214, 214, 214, 0.734) ;
+    margin-right: 10px;
+    margin-top: 2px;
+    .result_img{
+     height: 180px;
+     width:  180px;
+     cursor: pointer;
+    }
+
+    .result_metaData{
+        margin-left: 10px;
+        width: 40vw;
+
+
+        .result_value{
+            display: flex;
+            flex-direction: row;
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+            h2{
+                margin: 0;
+            }
+            .result_pointValue{
+                background-color: greenyellow;
+                border: 2.5px solid rgba(146, 189, 86, 0.734) ;
+                height: 15px;
+                width:  15px;
+                margin-top: 7px;
+                margin-left: 10px;
+                border-radius: 20px;
+
+            }
+
+        }
+
+        .result_characterist{
+            margin-top: 15px;
+            width: 400px;
+        }
+        
+    }
+    .result_extra{
+        margin-top: 40px;
+        margin-left: 100px;
+        color: rgb(160, 160, 160);
+    }
+}

@@ -1,0 +1,25 @@
+@import '../results/results.scss';
+$siseimg:450px;
+
+.details_container{
+    display: flex;
+    flex-direction: row;
+    .details_infoProduct{
+        width: 700px;
+
+        .details_imgProduct{
+            height: $siseimg;
+            width:  $siseimg;
+            margin-bottom: 20px;
+        }
+
+        .details_description{
+            width:50vw
+        }
+
+    }
+    .details_Values{
+        display: flex;
+        flex-direction: column ;
+    }
+}
