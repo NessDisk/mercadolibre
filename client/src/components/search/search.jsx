@@ -15,10 +15,15 @@ const Search = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault(); 
-
-    navigate('/items?search='+searchValue );
+if(searchValue === "")
+{
+  navigate('/' );
+}else{
+  
+  navigate('/items?search='+searchValue );
+}
     
-    console.log('Valor del input:', searchValue);
+    // console.log('Valor del input:', searchValue);
   };
 
 

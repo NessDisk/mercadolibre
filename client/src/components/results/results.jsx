@@ -3,29 +3,23 @@ import './results.scss'
 import Card from '../card/card'
 import { connect } from 'react-redux';
 import { setEndpoints } from '../../store/actions/actions';
+import { useLocation } from 'react-router-dom';
 
 function Results(props) {
-
+  const location = useLocation();
+  const queryParams = new URLSearchParams(location.search);
+  const searchValue = queryParams.get('search');
   const { endpoints, setEndpoints } = props;
 
+// productos
+ const products = endpoints.slice(0, 5);
 
-  // useEffect(() => {
-  //   // Simulando una llamada asincrónica para obtener los endpoints
-  //   // Aquí podrías usar fetch o axios para obtenerlos de una API real
-  //   setTimeout(() => {
-  //     const fetchedEndpoints = ['https://api.mercadolibre.com/sites/MLA/search?q=:test'];
-  //     setEndpoints(fetchedEndpoints);
-
-  //   }, 5000); // Simulamos un retardo de 2 segundos para obtener los endpoints
-
-  //   console.log(endpoints);
-  // }, [setEndpoints]);
 
   useEffect(() => {
     // Invocar la acción para obtener los datos desde los endpoints
-    props.setEndpoints();
-    console.log('El componente se ha montado');
-  }, [props.setEndpoints]);
+    props.setEndpoints(searchValue);
+    console.log('El componente se ha montado', searchValue);
+  }, [props.setEndpoints, searchValue]);
 
 
   return (
@@ -33,15 +27,20 @@ function Results(props) {
       <div className='dir_text' >dir →</div>
       <div className='resultSearch'>
 
-      {/* <Card></Card>
-      <Card></Card>
-      <Card></Card> */}
+     
+      
 
 {/* {props.endpoints.map((endpoint, index) => ( <p key={index}>{endpoint}</p> ))} */}
 
-{endpoints.map((endpoint, index) => ( <p key={index}>{endpoint.title}</p> ))}
+{/* <p key={index}>{endpoin.title}</p>  */}
+{products.map((endpoin, index) => ( 
+<Card  datos={endpoin} >
+
+</Card>
+  ))}
       </div>
     </div>
+  
   )
 }
 

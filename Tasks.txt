@@ -10,6 +10,6 @@ front - end
     - moverse entre pantallas por el router. <- x
     - poner la query en url from to the search <- x
     - Recoger el resultados de la query result <- x
-        - Conectar la quiere del bar con lad search
+        - Conectar la query del bar con la Search <-
     - Recoger el resultados de, la query details.
 

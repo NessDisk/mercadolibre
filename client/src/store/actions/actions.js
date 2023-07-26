@@ -1,14 +1,14 @@
 // actions.js
 export const SET_ENDPOINTS = 'SET_ENDPOINTS';
 
-export const setEndpoints = () => {
+export const setEndpoints = (searchValue ) => {
 //   return {
 //     type: SET_ENDPOINTS,
 //     payload: endpoints,
 //   };
 return (dispatch) => {
     // Realizar la solicitud a la API para obtener los endpoints
-    fetch('https://api.mercadolibre.com/sites/MLA/search?q=:test')
+    fetch('https://api.mercadolibre.com/sites/MLA/search?q=:'+searchValue)
       .then((response) => response.json())
       .then((data) => {
         // Dispatchear la acción con los datos obtenidos
