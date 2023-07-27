@@ -1,8 +1,9 @@
 // reducer.js
-import { SET_ENDPOINTS } from '../actions/actions';
+import { SET_ENDPOINTS,GET_ITEN_DETAILS } from '../actions/actions';
 
 const initialState = {
  endpoints: [],
+ details: [],
 };
 
 const rootReducer = (state = initialState, action) => {
@@ -12,6 +13,12 @@ const rootReducer = (state = initialState, action) => {
         ...state,
         endpoints: action.payload,
       };
+      case GET_ITEN_DETAILS:
+
+        return {
+          ...state,
+          details: action.payload,
+        };
     default:
       return state;
   }

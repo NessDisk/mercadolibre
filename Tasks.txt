@@ -10,6 +10,10 @@ front - end
     - moverse entre pantallas por el router. <- x
     - poner la query en url from to the search <- x
     - Recoger el resultados de la query result <- x
-        - Conectar la query del bar con la Search <-
-    - Recoger el resultados de, la query details.
+        - Conectar la query del bar con la Search <-x
+        - computar los valores de la query en la card. <-x
+    - Recoger el resultados de, la query details. <-
+        - llamar los valores del Id en la query
+        - computar los valores de la query en la vista
+        - crear las acciones que reciben la informacion de la query. 
 

@@ -14,6 +14,9 @@ function Results(props) {
 // productos
  const products = endpoints.slice(0, 5);
 
+ // breadcrumb
+//  const breadcrumb = endpoints["available_filters"].slice(0, 5);
+
 
   useEffect(() => {
     // Invocar la acción para obtener los datos desde los endpoints
@@ -24,19 +27,21 @@ function Results(props) {
 
   return (
     <div className='container'>
-      <div className='dir_text' >dir →</div>
+      <div className='dir_text' >
+        {/* {breadcrumb.map((bc, index) => ( 
+  <div> {bc["name"]}  </div>
+  ))} */}
+  </div>
       <div className='resultSearch'>
 
-     
+      dir →
       
 
 {/* {props.endpoints.map((endpoint, index) => ( <p key={index}>{endpoint}</p> ))} */}
 
 {/* <p key={index}>{endpoin.title}</p>  */}
 {products.map((endpoin, index) => ( 
-<Card  datos={endpoin} >
-
-</Card>
+<Card  datos={endpoin} ></Card>
   ))}
       </div>
     </div>

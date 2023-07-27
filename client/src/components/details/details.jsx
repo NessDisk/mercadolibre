@@ -1,21 +1,40 @@
-import React from 'react'
+import {React,useEffect } from 'react'
 import './details.scss'
 import Product_Test from '../../assets/Product_Test.jpg'
-function details() {
+
+import { connect } from 'react-redux';
+import { GetItenIddetails } from '../../store/actions/actions';
+import { useLocation } from 'react-router-dom';
+
+function Details(props) {
+
+  const location = useLocation();
+  const pathname = location.pathname;
+  const id = pathname.split('/').pop();
+
+  const { details, GetItenIddetails } = props;
+
+
+
+  useEffect(() => {
+    // Invocar la acción para obtener los datos desde los endpoints
+    props.GetItenIddetails(id);
+    console.log('El componente detail ', details);
+  }, [props.GetItenIddetails, id]);
+
   return (
     <div className='container'>
     <div className='dir_text' >dir →</div>
     <div className='resultSearch'>
       <div className='details_container'>
           <div  className='details_infoProduct'>
-            <img className='details_imgProduct' src={Product_Test} />
+            <img className='details_imgProduct' src={details["item"]["picture"]} />
             <div className='details_description' >
-              <h2 className='details_tittle'>
-                title  -- title  
+              <h2 className='details_tittle'>              
+               Descipcion de producto
               </h2>
               <p>
-                xxxxxxxxxxxxxx XXXXXXXXXXXXx xxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxx
-                xxxxxxxxxxxxxx xxxxxxxxxxxxxx xxxxxxxxxxxxx xxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxx
+              {details["item"]["description"]}
               </p>
             </div>
           </div>
@@ -24,14 +43,14 @@ function details() {
           info
           </div>
           <div>
-         Name- product
+          {details["item"]["title"]}
           </div>
           <div>
-          value xxxxx$
+          {details["item"]["price"]["amount"]} 
           </div>
-          <div>
+          <button>
           Botton
-          </div>
+          </button>
           </div>
       </div>
 
@@ -40,4 +59,15 @@ function details() {
   )
 }
 
-export default details
+const mapStateToProps = (state) => {
+  return {
+    details: state.details,
+  };
+};
+
+const mapDispatchToProps = {
+  GetItenIddetails,
+};
+
+
+export default connect(mapStateToProps, mapDispatchToProps)(Details) ;

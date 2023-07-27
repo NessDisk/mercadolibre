@@ -20,11 +20,11 @@ function Card( props) {
   }; 
   return (
     <div className='Reslut_info'  >
-          <Link  to={'/items/10'}>
+          <Link  to={'/items/'+datosRecibidos.id}>
               <img className='result_img' src={datosRecibidos.thumbnail} type="submit"/>
           </Link>
           <div className='result_metaData' >            
-            <Link to={'/items/10'} className='result_value' type="submit">
+            <Link to={'/items/'+datosRecibidos.id} className='result_value' type="submit">
                 <h2 className='result_numValue' >
                 {" $ " + datosRecibidos.price }
                 </h2>
