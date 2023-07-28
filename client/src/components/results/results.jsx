@@ -9,37 +9,35 @@ function Results(props) {
   const location = useLocation();
   const queryParams = new URLSearchParams(location.search);
   const searchValue = queryParams.get('search');
-  const { endpoints, setEndpoints } = props;
+  const { endpoints, setEndpoints, breadcrumbs } = props;
 
 // productos
  const products = endpoints.slice(0, 5);
 
  // breadcrumb
-//  const breadcrumb = endpoints["available_filters"].slice(0, 5);
+ const breadcrumb = breadcrumbs.slice(0, 4);
 
 
   useEffect(() => {
     // Invocar la acción para obtener los datos desde los endpoints
     props.setEndpoints(searchValue);
-    console.log('El componente se ha montado', searchValue);
+    console.log('El componente se ha montado',  searchValue);
   }, [props.setEndpoints, searchValue]);
 
 
   return (
     <div className='container'>
       <div className='dir_text' >
-        {/* {breadcrumb.map((bc, index) => ( 
-  <div> {bc["name"]}  </div>
-  ))} */}
+      <div className='breadcrumb'>
+      {breadcrumb.map((endpoin, index) => ( 
+        <div className='breadcrumb_tag'> {endpoin["name"] + ' > '}</div>
+        ))}
+      </div>
+ 
   </div>
       <div className='resultSearch'>
-
-      dir →
-      
-
-{/* {props.endpoints.map((endpoint, index) => ( <p key={index}>{endpoint}</p> ))} */}
-
-{/* <p key={index}>{endpoin.title}</p>  */}
+   
+   
 {products.map((endpoin, index) => ( 
 <Card  datos={endpoin} ></Card>
   ))}
@@ -48,10 +46,10 @@ function Results(props) {
   
   )
 }
-
 const mapStateToProps = (state) => {
   return {
-    endpoints: state.endpoints,
+    endpoints:  state.endpoints,
+    breadcrumbs: state.breadcrumbs
   };
 };
 

@@ -1,6 +1,20 @@
 @import '../results/results.scss';
 $siseimg:450px;
 
+.breadcrumb{
+    display: flex;
+    flex-direction: row ;
+    color:  grey;
+    .breadcrumb_tag{
+        cursor: pointer;
+        color:  grey;
+    }
+    .breadcrumb_tag:hover{
+        color: blue;
+    }
+   
+}
+
 .details_container{
     display: flex;
     flex-direction: row;

@@ -1,9 +1,11 @@
 // reducer.js
-import { SET_ENDPOINTS,GET_ITEN_DETAILS } from '../actions/actions';
+import { SET_ENDPOINTS,GET_ITEN_DETAILS, BREADCRUMB, BREADCRUMB_DETAILS } from '../actions/actions';
 
 const initialState = {
  endpoints: [],
  details: [],
+ breadcrumbs: [],
+ breadcrumbs_details: []
 };
 
 const rootReducer = (state = initialState, action) => {
@@ -19,6 +21,16 @@ const rootReducer = (state = initialState, action) => {
           ...state,
           details: action.payload,
         };
+        case BREADCRUMB:
+          return {
+            ...state,
+            breadcrumbs: action.payload,
+          };
+          case BREADCRUMB_DETAILS:
+            return {
+              ...state,
+              breadcrumbs_details: action.payload,
+            };
     default:
       return state;
   }

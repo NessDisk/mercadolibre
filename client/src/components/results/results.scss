@@ -1,4 +1,19 @@
 .container{
+    .breadcrumb{
+        display: flex;
+        flex-direction: row ;
+        color:  grey;
+        .breadcrumb_tag{
+            cursor: pointer;
+            color:  grey;
+        }
+        .breadcrumb_tag:hover{
+            color: blue;
+        }
+       
+    }
+  
+
     .dir_text{
         margin-top: 10px;
         margin-bottom: 10px;

@@ -1,5 +1,8 @@
 // actions.js
 export const SET_ENDPOINTS = 'SET_ENDPOINTS';
+export const BREADCRUMB = 'BREADCRUMB';
+export const BREADCRUMB_DETAILS = 'BREADCRUMB_DETAILS';
+
 export const GET_ITEN_DETAILS = 'GET_ITEN_DETAILS';
 
 export const setEndpoints = (searchValue ) => {
@@ -14,7 +17,11 @@ return (dispatch) => {
           type: SET_ENDPOINTS,
           payload: data.results,
         });
-        console.log(data)
+        dispatch({
+          type: BREADCRUMB,
+          payload: data.available_filters,
+        });
+        console.log( data.available_filters)
       })
       .catch((error) => {
         console.error('Error al obtener los datos:', error);
@@ -63,7 +70,11 @@ export const GetItenIddetails = (idDetails ) => {
                 type: GET_ITEN_DETAILS,
                 payload: finalData,
               });
-              // console.log("Details data",data,datadescription , finalData)
+              dispatch({
+                type: BREADCRUMB_DETAILS,
+                payload: data.attributes,
+              });
+              console.log("Details data",data.attributes)
             })
         })
         .catch((error) => {

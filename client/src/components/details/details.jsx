@@ -12,8 +12,10 @@ function Details(props) {
   const pathname = location.pathname;
   const id = pathname.split('/').pop();
 
-  const { details, GetItenIddetails } = props;
+  const { details, GetItenIddetails, breadcrumbs_details } = props;
+  const mostrarDiv = false;
 
+  const breadcrumbs_detail = breadcrumbs_details.slice(0, 4);
 
 
   useEffect(() => {
@@ -24,35 +26,47 @@ function Details(props) {
 
   return (
     <div className='container'>
-    <div className='dir_text' >dir →</div>
-    <div className='resultSearch'>
-      <div className='details_container'>
-          <div  className='details_infoProduct'>
-            <img className='details_imgProduct' src={details["item"]["picture"]} />
-            <div className='details_description' >
-              <h2 className='details_tittle'>              
-               Descipcion de producto
-              </h2>
-              <p>
-              {details["item"]["description"]}
-              </p>
-            </div>
-          </div>
-          <div className='details_Values'>
-          <div>
-          info
-          </div>
-          <div>
-          {details["item"]["title"]}
-          </div>
-          <div>
-          {details["item"]["price"]["amount"]} 
-          </div>
-          <button>
-          Botton
-          </button>
-          </div>
+    <div className='dir_text' >
+    <div className='breadcrumb'>
+      {breadcrumbs_detail.map((endpoin, index) => ( 
+        <div className='breadcrumb_tag'> {endpoin["name"] + ' > '}</div>
+        // <div>test</div>
+        
+        ))}
       </div>
+
+    </div>
+    <div className='resultSearch'>
+     { details != null > 0 &&
+        <div className='details_container'>
+              <div  className='details_infoProduct'>
+                <img className='details_imgProduct' src={details["item"]["picture"]} />
+                <div className='details_description' >
+                  <h2 className='details_tittle'>              
+                  Descipcion de producto
+                  </h2>
+                  <p>
+                    {details["item"]["description"]}
+                      </p>
+                      </div>
+                      </div>
+                        <div className='details_Values'>
+                        <div>
+                        info
+                        </div>
+                        <div>
+                        {details["item"]["title"]}
+                        </div>
+                        <div>
+                        {details["item"]["price"]["amount"]} 
+                    </div>
+                  <button>
+                  Botton
+                </button>
+              </div>
+          </div>
+      }
+      
 
     </div>
   </div>
@@ -62,6 +76,7 @@ function Details(props) {
 const mapStateToProps = (state) => {
   return {
     details: state.details,
+    breadcrumbs_details: state.breadcrumbs_details,
   };
 };
 
