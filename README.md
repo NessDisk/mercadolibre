@@ -1,4 +1,5 @@
 # mercadolibre
 
-arranca npm run
+- Instalar dependencias npm i 
+- Arrancar npm run
 

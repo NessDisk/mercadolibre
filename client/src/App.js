@@ -12,7 +12,7 @@ function App() {
   return (
     <Router className="App">
       <Search></Search>
-    <Routes>
+    <Routes  >
     {/* <Route exact path="/" component={Search} /> */}
       <Route  path='/items/*' element={<Results/>} />
       <Route path="/items/:id" element={<Details/>} />

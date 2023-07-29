@@ -16,5 +16,14 @@ front - end
         - llamar los valores del Id en la query <- x
         - computar los valores de la query en la vista <- x
         - crear las acciones que reciben la informacion de la query. <- x
-    barras de navegacion  <- 
-    barra de navegacion  <-
+    - barras de navegacion  <- x
+    - barra de navegacion  <- x
+    - posicion elements ("Details" , "itens" ) <- 
+    - que la barra de busqueda tenga los tamaños adecuados
+    - cambiar la fuente por mejor. 
+    - hacer que boton de busqueda quede ajustado sin importar el tamaño
+    - boton de en barra de detallos con le stylo de del documento. 
+    - verificar que los textos tengan los detalles acorde al documento.
+    - que el logo de mercado libre devuelve al "htrf:/"
+    - Dilate entre carga de pagina 2 segundos 
+    - quitar todos los console.log las scenas

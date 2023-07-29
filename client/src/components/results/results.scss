@@ -1,4 +1,9 @@
+$marginvalue:100px;
+$padding-horizontal-Value:40px;
 .container{
+    margin-left:  $marginvalue;
+    margin-right: $marginvalue;
+    margin-bottom: 20px;
     .breadcrumb{
         display: flex;
         flex-direction: row ;
@@ -22,9 +27,11 @@
     .resultSearch{
         background-color: #ffffff;
         // height: 500px;
-        width: 1000px;
+        // width: 1200px;
         text-align: left;
-        padding: 10px;       
+        padding: 10px;
+        padding-left:$padding-horizontal-Value ;
+        padding-right:$padding-horizontal-Value ;       
         
     }
 }
