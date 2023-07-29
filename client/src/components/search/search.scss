@@ -13,20 +13,22 @@ $zise-elements: 3vh;
     padding-top: 5px;
 
     width: 100%;
-    height: 5vh;
+    height: 7vh;
     .Logo_img{
-      height: 25px;
-      width: 35px;
-      margin-right: 10px;
+      height: 4.5vh;
+      width: 3.5vw;
+      margin-right: 20px;
+      margin-top: 5px;
 
     }
     .imput_panel{
       height: $zise-elements;
-      width:30vw;
+      width:40vw;
+      height: 25px;
     }
     .botton_Action{
-      height: 20pt;
-      width: 20pt;
+      height: 31px;
+      width: 29px;
       // margin-top: 4px;
       position: relative;
       left: -25px;
@@ -36,6 +38,8 @@ $zise-elements: 3vh;
       .lupa_img{
         height: 20px;
         width: 20px;
+        // height: 4vh;
+        // width: 2vw;
         position: relative;
         opacity: 0.5;
         left: -3px;
