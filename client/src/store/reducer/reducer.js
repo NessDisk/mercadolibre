@@ -1,5 +1,5 @@
 // reducer.js
-import { SET_ENDPOINTS,GET_ITEN_DETAILS, BREADCRUMB, BREADCRUMB_DETAILS } from '../actions/actions';
+import { SET_ENDPOINTS,GET_ITEN_DETAILS, BREADCRUMB, BREADCRUMB_DETAILS, SET_CLEAR_PROVIDER } from '../actions/actions';
 
 const initialState = {
  endpoints: [],
@@ -31,6 +31,15 @@ const rootReducer = (state = initialState, action) => {
               ...state,
               breadcrumbs_details: action.payload,
             };
+            case SET_CLEAR_PROVIDER:
+              console.log("llegue a clear provider")
+              return {
+                ...state,
+                endpoints: [],
+                details: [],
+                breadcrumbs: [],
+              breadcrumbs_details: []
+              };
     default:
       return state;
   }

@@ -6,6 +6,8 @@
     border-bottom: 1px solid rgba(214, 214, 214, 0.734) ;
     margin-right: 10px;
     margin-top: 2px;
+    font-family: 'Inter-Regular',sans-serif;
+
     .result_img{
      height: 180px;
      width:  180px;
@@ -18,11 +20,20 @@
 
 
         .result_value{
+            margin-top: 10px;
             display: flex;
             flex-direction: row;
             color: black;
             text-decoration: none;
             cursor: pointer;
+            
+            .result_numValue{
+                
+                font-family:'Inter-ExtraLight', sans-serif;
+
+            }
+                
+            
             h2{
                 margin: 0;
             }

@@ -4,6 +4,7 @@ export const BREADCRUMB = 'BREADCRUMB';
 export const BREADCRUMB_DETAILS = 'BREADCRUMB_DETAILS';
 
 export const GET_ITEN_DETAILS = 'GET_ITEN_DETAILS';
+export const SET_CLEAR_PROVIDER = 'SET_CLEAR_PROVIDER';
 
 export const setEndpoints = (searchValue ) => {
 
@@ -83,3 +84,16 @@ export const GetItenIddetails = (idDetails ) => {
     };
   
   };
+
+  export const ClearProvider = () => {
+
+
+    return (dispatch) => {
+      console.log(" clear provider")
+      dispatch({
+        type: SET_CLEAR_PROVIDER,
+        payload: "",
+      });
+
+    }
+  }

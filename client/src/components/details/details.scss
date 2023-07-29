@@ -28,12 +28,46 @@ $siseimg:450px;
         }
 
         .details_description{
-            width:50vw
+            width:50vw;
+            .description_p{
+                color: rgb(110, 110, 110);
+                text-align: justify;
+                font-size: 16px; 
+                line-height: 1.5; 
+            }
         }
 
     }
     .details_Values{
         display: flex;
         flex-direction: column ;
+        .details_Unid_solds{
+
+            font-size: small;
+            color: rgb(110, 110, 110);
+        }
+        .details_tittle{
+           font-style: initial;
+           font-weight:bold; 
+           margin-top: 10px;
+        }
+        .details_amount{
+            font-weight:lighter; 
+           margin-top: 15px;
+           font-size: 30px;
+        }
+        .buttton_Comprar{
+            background-color: rgb(95, 95, 232) ;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            width: 250px;
+            height: 38px;
+            color: white;
+            border-color: #2196F3;
+            border-radius: 3px;
+            margin-top: 50px;
+            font-size: medium;
+
+        }
     }
 }

@@ -1,7 +1,28 @@
+@font-face {
+  font-family: 'Inter'; 
+  src: url('../src/assets/fonts/Inter/Inner-12/Desktop/Inter-Light.ttf ');   
+}
+
+@font-face {
+  font-family: 'Inter-Regular'; 
+  src: url('../src/assets/fonts/Inter/Inner-12/Desktop/Inter-Regular.ttf ');   
+}
+
+
+@font-face {
+  font-family: 'Inter-bold'; 
+  src: url('../src/assets/fonts/Inter/Inner-12/Desktop/Inter-Bold.ttf ');   
+}
+
+@font-face {
+  font-family: 'Inter-ExtraLight'; 
+  src: url('../src/assets/fonts/Inter/Inner-12/Desktop/Inter-ExtraLight.ttf ');   
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', 'Inter', 'Inter-Regular', 'Inter-bold','Inter-ExtraLight',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

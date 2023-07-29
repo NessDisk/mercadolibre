@@ -19,7 +19,7 @@ function Results(props) {
 
 
   useEffect(() => {
-    // Invocar la acción para obtener los datos desde los endpoints
+
     props.setEndpoints(searchValue);
     console.log('El componente se ha montado',  searchValue);
   }, [props.setEndpoints, searchValue]);
