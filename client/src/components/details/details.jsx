@@ -30,9 +30,7 @@ function Details(props) {
     <div className='dir_text' >
     <div className='breadcrumb'>
       {breadcrumbs_detail.map((endpoin, index) => ( 
-        <div className='breadcrumb_tag'> {endpoin["name"] + ' > '}</div>
-        // <div>test</div>
-        
+        <div className='breadcrumb_tag'> {endpoin["name"] + ' > '}</div>       
         ))}
       </div>
 

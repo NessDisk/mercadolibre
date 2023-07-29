@@ -32,7 +32,7 @@ const rootReducer = (state = initialState, action) => {
               breadcrumbs_details: action.payload,
             };
             case SET_CLEAR_PROVIDER:
-              console.log("llegue a clear provider")
+          
               return {
                 ...state,
                 endpoints: [],

@@ -22,7 +22,7 @@ return (dispatch) => {
           type: BREADCRUMB,
           payload: data.available_filters,
         });
-        console.log( data.available_filters)
+  
       })
       .catch((error) => {
         console.error('Error al obtener los datos:', error);
@@ -75,7 +75,7 @@ export const GetItenIddetails = (idDetails ) => {
                 type: BREADCRUMB_DETAILS,
                 payload: data.attributes,
               });
-              console.log("Details data",data.attributes)
+             
             })
         })
         .catch((error) => {
@@ -89,7 +89,7 @@ export const GetItenIddetails = (idDetails ) => {
 
 
     return (dispatch) => {
-      console.log(" clear provider")
+
       dispatch({
         type: SET_CLEAR_PROVIDER,
         payload: "",

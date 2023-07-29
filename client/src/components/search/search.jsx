@@ -27,8 +27,6 @@ if(searchValue === "")
 }else{
   navigate('/items?search='+searchValue );
 }
-    
-    // console.log('Valor del input:', searchValue);
   };
 
 

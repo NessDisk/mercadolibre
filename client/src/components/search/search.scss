@@ -7,11 +7,9 @@ $zise-elements: 3vh;
 .search_container{
     background-color:#ffe900;
     
-    // position: absolute;
-    // align-items: center;
+
        padding-top: 5px;
-    
-    // position: fixed;
+
         width: 100%;
         height: 8vh;
 
@@ -30,27 +28,24 @@ $zise-elements: 3vh;
 
     }
     .imput_panel{
-      // height: $zise-elements;
+
       width:40vw;
       height: 25px;
-      // position: static;
-      // width: 100px;
-      // height:100px;
+
     }
     .botton_Action{
       height: 33px;
       width: 29px;
-      // margin-top: 4px;
+
       position: relative;
       left: -25px;
-      // top: -0.5px;
+
       cursor: pointer;
 
       .lupa_img{
         height: 20px;
         width: 20px;
-        // height: 4vh;
-        // width: 2vw;
+
         position: relative;
         opacity: 0.5;
         left: -3px;
