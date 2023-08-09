@@ -1,7 +1,7 @@
 @import '../results/results.scss';
 
 // pc
-@media (min-width: 859px) {
+@media (min-width: 970px) {
     $siseimg:450px;
 
     .breadcrumb{
@@ -77,14 +77,15 @@
 }
 
 // smartphone
-@media (max-width: 859px) {
-    $siseimg:250px;
+@media (max-width: 970px) {
+    $siseimg:150px;
 
 .breadcrumb{
     display: flex;
     flex-direction: row ;
     color:  grey;
     .breadcrumb_tag{
+        display: none;
         cursor: pointer;
         color:  grey;
     }
