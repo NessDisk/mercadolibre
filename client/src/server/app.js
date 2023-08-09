@@ -15,7 +15,6 @@ app.get('/api/search', async (req, res) => {
 
   const product = response.data;
     const query = req.query.query;
-  const data = { message: query };
 
 
 

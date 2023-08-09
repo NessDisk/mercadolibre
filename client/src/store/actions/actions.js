@@ -11,6 +11,7 @@ export const setEndpoints = (searchValue ) => {
 return (dispatch) => {
     // Realizar la solicitud a la API para obtener los endpoints
     fetch('http://localhost:3100/api/search?query='+searchValue)
+        // fetch('http://localhost:8081/search?nameParam='+searchValue)
       .then((response) => response.json())
       .then((data) => {
         // Dispatchear la acción con los datos obtenidos
