@@ -10,11 +10,12 @@ export const setEndpoints = (searchValue ) => {
 
 return (dispatch) => {
     // Realizar la solicitud a la API para obtener los endpoints
-    fetch('http://localhost:3100/api/search?query='+searchValue || "https://mercadolibre-rt.vercel.app/api/search?query="+ searchValue)
-        // fetch('http://localhost:8081/search?nameParam='+searchValue)
+    fetch( 'https://servermercadolibre-6jcu.vercel.app/api/search?query=' + searchValue )
+        // fetch('http://localhost:3100/api/search?query='+searchValue ) //version local
       .then((response) => response.json())
       .then((data) => {
         // Dispatchear la acción con los datos obtenidos
+        console.log("test producto");
         dispatch({
           type: SET_ENDPOINTS,
           payload: data.results,
@@ -37,7 +38,8 @@ export const GetItenIddetails = (idDetails ) => {
 
   return (dispatch) => {
       // Realizar la solicitud a la API para obtener los endpoints
-      fetch('http://localhost:3100/api/items?id='+idDetails)
+      fetch('https://servermercadolibre-6jcu.vercel.app/api/items?id='+idDetails) //server
+      // fetch('http://localhost:3100/api/items?id='+idDetails)// local 
         .then((response) => response.json())
         .then((data) => {              
             console.log("detail", data.item.attributes);
