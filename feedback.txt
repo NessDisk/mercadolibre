@@ -1,16 +1,24 @@
-- Responsive. <-
+- Responsive. <- x
 - Express como puente app.<- x
-- practicar el flujo - entrevistas - que es una App.
+- practicar el flujo - entrevistas - que es una App <-x
 -----------------
 
-- Springboot. <- 
+- Springboot. <- x
 
 -------------
 - Hacer cursos:  https://platzi.com/clases/5450-entrevista-trabajo/58940-por-que-debes-prepararte-para-las-entrevistas-de-t/
 
-- entrevista 
-*springboot 
-*react
-*angular.
-*api.
-*base de datos. (mysql)
+- Entrevista  <- 
+* Springboot  <- x
+* React <- 
+* Angula.
+* Api.
+* base de datos. (mysql)
+* Back end
+* Front End
+
+
+- Css 
+- React
+- Java script
+- Javascript
