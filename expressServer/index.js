@@ -5,7 +5,7 @@ const axios = require('axios');
 const cors = require('cors');
 
 
-app.use(express.json(), cors({ origin: ['http://localhost:3000', "https://mercadolibre-4ldbo8qcu-nessdisk.vercel.app/"] }));
+app.use(express.json(), cors({ origin: ['http://localhost:3000', "https://mercadolibre-4ldbo8qcu-nessdisk.vercel.app"] }));
 // Get roter mercadoLibre
 app.get('/api/search', async (req, res) => {
   
